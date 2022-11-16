@@ -51,6 +51,6 @@ li {
 	padding: 0 10%;
 
 	@media screen and (min-width: 1600px) {
-		padding: calc((100%-80rem) / 2);
+		padding: 0 calc((100% - 80rem) / 2);
 	}
 }

@@ -61,9 +61,7 @@ li {
 }
 @media screen and (min-width: 1600px) {
   .container {
-    width: 80rem;
-    margin: 0 auto;
-    padding: 0;
+    padding: 0 calc((100% - 80rem) / 2);
   }
 }
 
@@ -72,7 +70,9 @@ li {
   justify-content: space-between;
   align-items: center;
   height: 5rem;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 10;
 }
 .navbar .brand {
