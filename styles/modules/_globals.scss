@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+html {
+	--color-background: 0, 60%, 94%;
+	--color-primary: 357, 96%, 60%;
+	--color-text: 200, 33%, 20%;
+
+	scroll-behavior: smooth;
+}
+
+body {
+	width: 100%;
+
+	font-family: 'Montserrat';
+	font-weight: 300;
+
+	color: hsl(var(--color-text));
+	background: hsl(var(--color-background));
+}
+
+button {
+	background: transparent;
+	border: none;
+	border-radius: 2px;
+}
+
+a {
+	text-decoration: none;
+
+	color: inherit;
+}
+
+ul,
+ol,
+li {
+	list-style-type: none;
+}
+
+.container {
+	width: 100%;
+	max-width: 80rem;
+
+	padding: 0 10%;
+}
