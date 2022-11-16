@@ -47,7 +47,10 @@ li {
 
 .container {
 	width: 100%;
-	max-width: 80rem;
 
 	padding: 0 10%;
+
+	@media screen and (min-width: 1600px) {
+		padding: calc((100%-80rem) / 2);
+	}
 }

@@ -57,8 +57,14 @@ li {
 
 .container {
   width: 100%;
-  max-width: 80rem;
   padding: 0 10%;
+}
+@media screen and (min-width: 1600px) {
+  .container {
+    width: 80rem;
+    margin: 0 auto;
+    padding: 0;
+  }
 }
 
 .navbar {
@@ -101,6 +107,11 @@ li {
 .navbar .hamburger::after {
   transform: translate(0, 0.5rem);
 }
+@media screen and (min-width: 976px) {
+  .navbar .hamburger {
+    display: none;
+  }
+}
 .navbar .nav {
   width: 100%;
   height: 100vh;
@@ -136,6 +147,30 @@ li {
 .navbar .nav .nav-items .nav-item:nth-of-type(4) {
   transform: translateX(-5rem);
 }
+@media screen and (min-width: 976px) {
+  .navbar .nav .nav-items .nav-item {
+    transition: unset;
+  }
+  .navbar .nav .nav-items .nav-item:nth-of-type(1) {
+    transform: unset;
+  }
+  .navbar .nav .nav-items .nav-item:nth-of-type(2) {
+    transform: unset;
+  }
+  .navbar .nav .nav-items .nav-item:nth-of-type(3) {
+    transform: unset;
+  }
+  .navbar .nav .nav-items .nav-item:nth-of-type(4) {
+    transform: unset;
+  }
+}
+@media screen and (min-width: 976px) {
+  .navbar .nav .nav-items {
+    flex-direction: row;
+    gap: 4rem;
+    font-size: 1.25rem;
+  }
+}
 .navbar .nav .mobile-watermark {
   position: absolute;
   bottom: -2.5rem;
@@ -145,9 +180,22 @@ li {
       writing-mode: vertical-lr;
   opacity: 0.04;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 976px) {
   .navbar .nav .mobile-watermark {
     display: none;
+  }
+}
+@media screen and (min-width: 976px) {
+  .navbar .nav {
+    width: auto;
+    height: auto;
+    padding: 0;
+    color: hsl(var(--color-text));
+    background: transparent;
+    position: static;
+    transform: unset;
+    transition: unset;
+    overflow: unset;
   }
 }
 .navbar.mobile-expanded .brand {

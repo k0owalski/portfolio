@@ -55,6 +55,10 @@
 		&::after {
 			transform: translate(0, 0.5rem);
 		}
+
+		@media screen and (min-width: 976px) {
+			display: none;
+		}
 	}
 
 	.nav {
@@ -102,6 +106,33 @@
 				&:nth-of-type(4) {
 					transform: translateX(-5rem);
 				}
+
+				@media screen and (min-width: 976px) {
+					transition: unset;
+
+					&:nth-of-type(1) {
+						transform: unset;
+					}
+
+					&:nth-of-type(2) {
+						transform: unset;
+					}
+
+					&:nth-of-type(3) {
+						transform: unset;
+					}
+
+					&:nth-of-type(4) {
+						transform: unset;
+					}
+				}
+			}
+
+			@media screen and (min-width: 976px) {
+				flex-direction: row;
+				gap: 4rem;
+
+				font-size: 1.25rem;
 			}
 		}
 
@@ -115,9 +146,26 @@
 			writing-mode: vertical-lr;
 			opacity: 0.04;
 
-			@media screen and (min-width: 1024px) {
+			@media screen and (min-width: 976px) {
 				display: none;
 			}
+		}
+
+		@media screen and (min-width: 976px) {
+			width: auto;
+			height: auto;
+
+			padding: 0;
+
+			color: hsl(var(--color-text));
+			background: transparent;
+
+			position: static;
+			transform: unset;
+
+			transition: unset;
+
+			overflow: unset;
 		}
 	}
 
