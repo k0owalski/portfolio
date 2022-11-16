@@ -72,6 +72,7 @@ li {
 .navbar .brand {
   font-size: 1.5rem;
   font-weight: 400;
+  transition: color 0.64s;
 }
 .navbar .hamburger {
   display: flex;
@@ -87,7 +88,7 @@ li {
   height: 1px;
   background: hsl(var(--color-text));
   border-radius: 1rem;
-  transition: transform 0.32s ease, opacity 0.32s;
+  transition: transform 0.32s ease, opacity 0.32s, background-color 0.64s;
 }
 .navbar .hamburger::before, .navbar .hamburger::after {
   content: "";
@@ -120,6 +121,21 @@ li {
   gap: 2rem;
   font-size: 1.5rem;
 }
+.navbar .nav .nav-items .nav-item {
+  transition: transform 0.96s ease-in-out;
+}
+.navbar .nav .nav-items .nav-item:nth-of-type(1) {
+  transform: translateX(-2rem);
+}
+.navbar .nav .nav-items .nav-item:nth-of-type(2) {
+  transform: translateX(-3rem);
+}
+.navbar .nav .nav-items .nav-item:nth-of-type(3) {
+  transform: translateX(-4rem);
+}
+.navbar .nav .nav-items .nav-item:nth-of-type(4) {
+  transform: translateX(-5rem);
+}
 .navbar .nav .mobile-watermark {
   position: absolute;
   bottom: -2.5rem;
@@ -139,17 +155,23 @@ li {
 }
 .navbar.mobile-expanded .hamburger .hamburger-inner {
   transform: translate(-1rem, 0);
-  background: hsl(var(--color-background));
+  background-color: hsl(var(--color-background));
   opacity: 0;
 }
 .navbar.mobile-expanded .hamburger::before {
   transform: translate(0, 0) rotateZ(45deg);
-  background: hsl(var(--color-background));
+  background-color: hsl(var(--color-background));
 }
 .navbar.mobile-expanded .hamburger::after {
   transform: translate(0, 0) rotateZ(-45deg);
-  background: hsl(var(--color-background));
+  background-color: hsl(var(--color-background));
 }
 .navbar.mobile-expanded .nav {
+  transform: translateX(0);
+}
+.navbar.mobile-expanded .nav .nav-item:nth-of-type(1),
+.navbar.mobile-expanded .nav .nav-item:nth-of-type(2),
+.navbar.mobile-expanded .nav .nav-item:nth-of-type(3),
+.navbar.mobile-expanded .nav .nav-item:nth-of-type(4) {
   transform: translateX(0);
 }/*# sourceMappingURL=index.css.map */
