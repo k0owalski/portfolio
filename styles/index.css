@@ -121,7 +121,7 @@ li {
   transform: translateX(-100%);
   padding: 8rem 10% 0;
   color: hsl(var(--color-background));
-  background: hsla(var(--color-text), 0.96);
+  background: hsl(var(--color-text));
   transition: transform 0.32s ease-in;
   overflow: hidden;
   z-index: -1;
@@ -222,4 +222,55 @@ li {
 .navbar.mobile-expanded .nav .nav-item:nth-of-type(3),
 .navbar.mobile-expanded .nav .nav-item:nth-of-type(4) {
   transform: translateX(0);
+}
+
+.header {
+  width: 100%;
+  position: relative;
+  padding-top: 10rem;
+}
+.header .header-title {
+  max-width: 40rem;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+.header .header-description {
+  max-width: 40rem;
+  margin: 2rem 0 3rem;
+}
+.header .cta-btn {
+  padding: 0.5rem;
+  border: 1px solid hsla(var(--color-primary), 0.32);
+  transition: border 0.32s;
+}
+.header .cta-btn .cta-btn-inner {
+  display: block;
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+  color: hsl(var(--color-background));
+  background-color: hsl(var(--color-primary));
+}
+.header .cta-btn:hover {
+  border: 1px solid hsla(var(--color-primary), 1);
+}
+.header .watermark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.64;
+}
+@media screen and (min-width: 976px) {
+  .header .watermark-mobile {
+    display: none;
+  }
+}
+.header .watermark-desktop {
+  display: none;
+  width: 64vw;
+  max-width: 50rem;
+}
+@media screen and (min-width: 976px) {
+  .header .watermark-desktop {
+    display: block;
+  }
 }/*# sourceMappingURL=index.css.map */

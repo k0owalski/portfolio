@@ -1,0 +1,68 @@
+.header {
+	width: 100%;
+
+	position: relative;
+
+	padding-top: 10rem;
+
+	.header-title {
+		max-width: 40rem;
+
+		font-size: 2.5rem;
+		font-weight: 300;
+	}
+
+	.header-description {
+		max-width: 40rem;
+
+		margin: 2rem 0 3rem;
+	}
+
+	.cta-btn {
+		padding: 0.5rem;
+
+		border: 1px solid hsla(var(--color-primary), 0.32);
+
+		transition: border 0.32s;
+
+		.cta-btn-inner {
+			display: block;
+
+			padding: 0.75rem 1rem;
+
+			font-weight: 500;
+
+			color: hsl(var(--color-background));
+			background-color: hsl(var(--color-primary));
+		}
+
+		&:hover {
+			border: 1px solid hsla(var(--color-primary), 1);
+		}
+	}
+
+	.watermark {
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		opacity: 0.64;
+	}
+
+	.watermark-mobile {
+		@media screen and (min-width: 976px) {
+			display: none;
+		}
+	}
+
+	.watermark-desktop {
+		display: none;
+
+		width: 64vw;
+		max-width: 50rem;
+
+		@media screen and (min-width: 976px) {
+			display: block;
+		}
+	}
+}
