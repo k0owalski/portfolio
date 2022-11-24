@@ -287,6 +287,7 @@ li {
   display: flex;
   flex-direction: column;
   gap: 6rem;
+  width: 100%;
   position: relative;
 }
 .main .section .section-heading {
@@ -324,6 +325,10 @@ li {
   font-size: 12rem;
   font-weight: 600;
   opacity: 0.04;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .main .services .section-content {
   display: grid;
@@ -379,4 +384,88 @@ li {
   .main .services .section-content {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+}
+.main .portfolio .section-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem 4rem;
+}
+.main .portfolio .section-content .thumbnail {
+  width: 100%;
+  aspect-ratio: 1/1;
+  position: relative;
+  background-color: hsla(var(--color-text), 0.04);
+  border-radius: 2px;
+}
+.main .portfolio .section-content .thumbnail .thumbnail-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main .portfolio .section-content .thumbnail::before {
+  content: "";
+  width: calc(100% + 1rem);
+  height: calc(100% + 1rem);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid hsla(var(--color-primary), 0.32);
+  border-radius: 2px;
+  z-index: -1;
+}
+@media screen and (min-width: 976px) {
+  .main .portfolio .section-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .main .portfolio .section-content {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+.main .contact .section-content .form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.main .contact .section-content .form .input-field {
+  width: 100%;
+  position: relative;
+}
+.main .contact .section-content .form .input-field .label {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  transform: translateY(-50%);
+  padding: 0 1rem;
+  background-color: hsl(var(--color-background));
+}
+.main .contact .section-content .form .input-field .field {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0 1rem;
+  color: hsl(var(--color-text));
+  background-color: hsl(var(--color-background));
+  border: 1px solid hsla(var(--color-text), 0.32);
+  border-radius: 2px;
+}
+.main .contact .section-content .form .input-field .field.message-field {
+  padding: 1rem;
+}
+.main .contact .section-content .form .submit {
+  padding: 0.5rem;
+  border: 1px solid hsla(var(--color-primary), 0.32);
+  transition: border 0.32s;
+}
+.main .contact .section-content .form .submit .submit-inner {
+  display: block;
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+  color: hsl(var(--color-background));
+  background-color: hsl(var(--color-primary));
+}
+.main .contact .section-content .form .submit:hover {
+  border: 1px solid hsla(var(--color-primary), 1);
 }/*# sourceMappingURL=index.css.map */
