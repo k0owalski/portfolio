@@ -42,6 +42,7 @@ button {
   background: transparent;
   border: none;
   border-radius: 2px;
+  cursor: pointer;
 }
 
 a {
@@ -468,4 +469,54 @@ li {
 }
 .main .contact .section-content .form .submit:hover {
   border: 1px solid hsla(var(--color-primary), 1);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding: 2rem 3rem;
+  position: relative;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: hsl(var(--color-background));
+  background-color: hsl(var(--color-text));
+  overflow: hidden;
+}
+.footer .copyrights {
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+.footer .footer-watermark-lines {
+  display: flex;
+  gap: 1rem;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  opacity: 0.32;
+}
+.footer .footer-watermark-lines .line-short,
+.footer .footer-watermark-lines .line-long {
+  width: 1px;
+  height: 50%;
+  background-color: hsl(var(--color-background));
+  border-radius: 1rem;
+}
+.footer .footer-watermark-lines .line-long {
+  height: 100%;
+}
+.footer .footer-watermark-text {
+  position: absolute;
+  top: 50%;
+  right: 4rem;
+  transform: translateY(-50%);
+  font-size: 8rem;
+  font-weight: 400;
+  opacity: 0.04;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }/*# sourceMappingURL=index.css.map */
