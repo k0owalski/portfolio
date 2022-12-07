@@ -1,68 +1,112 @@
 .header {
-	width: 100%;
+	display: flex;
+	flex-direction: column;
 
-	position: relative;
+	width: 80%;
+	max-width: 1440px;
 
-	padding-top: 10rem;
+	margin: 0 auto;
 
-	.header-title {
-		max-width: 40rem;
+	.header-bar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 
-		font-size: 2.5rem;
-		font-weight: 300;
+		width: 100%;
+		height: 5rem;
 	}
 
-	.header-description {
-		max-width: 40rem;
+	.topbar {
+		border-bottom: 1px solid hsla(var(--color-text), 0.16);
 
-		margin: 2rem 0 3rem;
-	}
+		.contact {
+			display: flex;
+			gap: 4rem;
 
-	.cta-btn {
-		padding: 0.5rem;
+			.contact-link {
+				display: flex;
+				gap: 0.75rem;
 
-		border: 1px solid hsla(var(--color-primary), 0.32);
+				&::before {
+					content: '';
 
-		transition: border 0.32s;
+					display: block;
 
-		.cta-btn-inner {
-			display: block;
+					width: 1.25rem;
+					height: 1.25rem;
 
-			padding: 0.75rem 1rem;
+					background-repeat: no-repeat;
+					background-position: center;
+					background-size: contain;
 
-			font-weight: 500;
+					opacity: 0.64;
+				}
 
-			color: hsl(var(--color-background));
-			background-color: hsl(var(--color-primary));
+				&.contact-link-mail::before {
+					background-image: url('../../assets/icons/icon-mail.svg');
+				}
+
+				&.contact-link-tel::before {
+					background-image: url('../../assets/icons/icon-tel.svg');
+				}
+			}
 		}
 
-		&:hover {
-			border: 1px solid hsla(var(--color-primary), 1);
+		.socials {
+			display: flex;
+			gap: 1rem;
+
+			.social-icon {
+				width: 1.5rem;
+				height: 1.5rem;
+
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: contain;
+
+				opacity: 0.64;
+
+				&.social-icon-fb {
+					background-image: url('../../assets/icons/icon-fb.svg');
+				}
+
+				&.social-icon-inst {
+					background-image: url('../../assets/icons/icon-inst.svg');
+				}
+			}
 		}
 	}
 
-	.watermark {
-		position: absolute;
-		top: 0;
-		right: 0;
+	.navbar {
+		.brand {
+			display: flex;
+			gap: 0.75rem;
 
-		opacity: 0.64;
-	}
+			font-size: 1.25rem;
+			font-weight: 300;
 
-	.watermark-mobile {
-		@media screen and (min-width: 976px) {
-			display: none;
+			&::before {
+				content: '';
+
+				width: 1.5rem;
+				height: 1.5rem;
+
+				background-image: url('../../assets/icons/logo.svg');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: contain;
+
+				opacity: 1;
+			}
 		}
-	}
 
-	.watermark-desktop {
-		display: none;
+		.nav-items {
+			display: flex;
+			gap: 4rem;
 
-		width: 64vw;
-		max-width: 50rem;
-
-		@media screen and (min-width: 976px) {
-			display: block;
+			.nav-item {
+				font-size: 1.25rem;
+			}
 		}
 	}
 }

@@ -10,18 +10,15 @@
 }
 
 html {
-	--color-background: 0, 60%, 94%;
-	--color-primary: 357, 96%, 60%;
-	--color-text: 200, 33%, 20%;
+	--color-background: 0, 0%, 7%;
+	--color-text: 0, 0%, 96%;
 
 	scroll-behavior: smooth;
 }
 
 body {
-	width: 100%;
-
 	font-family: 'Montserrat';
-	font-weight: 300;
+	font-weight: 100;
 
 	color: hsl(var(--color-text));
 	background: hsl(var(--color-background));
@@ -45,14 +42,4 @@ ul,
 ol,
 li {
 	list-style-type: none;
-}
-
-.container {
-	width: 100%;
-
-	padding: 0 10%;
-
-	@media screen and (min-width: 1600px) {
-		padding: 0 calc((100% - 80rem) / 2);
-	}
 }

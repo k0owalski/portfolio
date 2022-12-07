@@ -7,239 +7,41 @@
 		<title>Konrad Kowalik</title>
 
 		<link rel="stylesheet" href="styles/index.css" />
+
+		<script src="scripts/index.js" defer></script>
 	</head>
 	<body>
-		<div class="navbar container" id="navbar">
-			<a class="brand" href="/">Konrad Kowalik</a>
-			<button class="hamburger" id="hamburger" type="button">
-				<div class="hamburger-inner"></div>
-			</button>
-			<nav class="nav">
+		<header class="header">
+			<div class="header-bar topbar">
+				<div class="contact">
+					<a
+						class="contact-link contact-link-mail"
+						href="mailto:knrd.kowalik@gmail.com"
+						>knrd.kowalik@gmail.com</a
+					>
+					<a class="contact-link contact-link-tel" href="tel:733473426"
+						>+48 733 473 426</a
+					>
+				</div>
+				<div class="socials">
+					<a class="social-icon social-icon-fb" href="#"></a>
+					<a class="social-icon social-icon-inst" href="#"></a>
+				</div>
+			</div>
+			<nav class="header-bar navbar">
+				<a class="brand" href="#welcome">Konrad Kowalik</a>
 				<ul class="nav-items">
 					<li class="nav-item">
-						<a class="nav-link" href="#uglugi">Ugługi</a>
+						<a class="nav-item-link" href="#services">Usługi</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#portfolio">Portfolio</a>
+						<a class="nav-item-link" href="#portfolio">Portfolio</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#o-mnie">O mnie</a>
+						<a class="nav-item-link" href="#contact">Kontakt</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#kontakt">Kontakt</a>
-					</li>
-					<!-- <li class="nav-item lang-select">
-						<button class="lang-button"></button>
-						<ul class="lang-options">
-							<li class="lang-option">
-								<a class="lang-link" href="/">PL</a>
-							</li>
-							<li class="lang-option">
-								<a class="lang-link" href="/en/">EN</a>
-							</li>
-						</ul>
-					</li> -->
 				</ul>
-				<div class="mobile-watermark">MENU</div>
 			</nav>
-		</div>
-		<header class="header container">
-			<h1 class="header-title">
-				Wystarczy jedna wizja, a ja zajmę się całą resztą.
-			</h1>
-			<p class="header-description">
-				Przeprowadzę Cię przez cały proces projektowania Twojej strony. Nie
-				musisz się niczym martwić. Wystarczy, że odpowiesz na kilka moich pytań,
-				co do projektu, a następnie zaakceptujesz wersję, która sprosta
-				wszystkim, Twoim oczekiwaniom.
-			</p>
-			<button class="cta-btn" type="button">
-				<a href="#kontakt" class="cta-btn-inner">Omówmy Twoją wizję!</a>
-			</button>
-			<img
-				class="watermark watermark-mobile"
-				src="assets/images/watermarks/watermark-mobile.svg"
-				alt="Dekoracja w tle"
-			/>
-			<img
-				class="watermark watermark-desktop"
-				src="assets/images/watermarks/watermark-desktop.svg"
-				alt="Dekoracja w tle"
-			/>
 		</header>
-		<main class="main container">
-			<section class="section services">
-				<div class="section-content">
-					<article class="service-card">
-						<h3 class="service-card-title">Strony internetowe</h3>
-						<p class="service-card-description">
-							Wykonuję różnego rodzaju strony firmowe - “wizytówki”,
-							landing-page. Nie korzystam z żadnych gotowych szablonów. Wszytko
-							przygotowuję od podstaw, by było dostosowane do Twoich potrzeb.
-						</p>
-						<div class="service-card-watermark">
-							<div class="line-long"></div>
-							<div class="line-short"></div>
-						</div>
-						<div class="service-card-watermark">
-							<div class="line-long"></div>
-							<div class="line-short"></div>
-						</div>
-					</article>
-					<article class="service-card">
-						<h3 class="service-card-title">Blogi i portale</h3>
-						<p class="service-card-description">
-							Wykonuję różnego rodzaju strony firmowe - “wizytówki”,
-							landing-page. Nie korzystam z żadnych gotowych szablonów. Wszytko
-							przygotowuję od podstaw, by było dostosowane do Twoich potrzeb.
-						</p>
-						<div class="service-card-watermark">
-							<div class="line-long"></div>
-							<div class="line-short"></div>
-						</div>
-						<div class="service-card-watermark">
-							<div class="line-long"></div>
-							<div class="line-short"></div>
-						</div>
-					</article>
-					<article class="service-card">
-						<h3 class="service-card-title">Aplikacje</h3>
-						<p class="service-card-description">
-							Wykonuję różnego rodzaju strony firmowe - “wizytówki”,
-							landing-page. Nie korzystam z żadnych gotowych szablonów. Wszytko
-							przygotowuję od podstaw, by było dostosowane do Twoich potrzeb.
-						</p>
-						<div class="service-card-watermark">
-							<div class="line-long"></div>
-							<div class="line-short"></div>
-						</div>
-						<div class="service-card-watermark">
-							<div class="line-long"></div>
-							<div class="line-short"></div>
-						</div>
-					</article>
-					<article class="service-card">
-						<h3 class="service-card-title">Sklepy internetowe</h3>
-						<p class="service-card-description">
-							Wykonuję różnego rodzaju strony firmowe - “wizytówki”,
-							landing-page. Nie korzystam z żadnych gotowych szablonów. Wszytko
-							przygotowuję od podstaw, by było dostosowane do Twoich potrzeb.
-						</p>
-						<div class="service-card-watermark">
-							<div class="line-long"></div>
-							<div class="line-short"></div>
-						</div>
-						<div class="service-card-watermark">
-							<div class="line-long"></div>
-							<div class="line-short"></div>
-						</div>
-					</article>
-				</div>
-				<h2 class="section-watermark">Usługi</h2>
-			</section>
-			<section class="section portfolio">
-				<div class="section-heading">
-					<h3 class="section-heading-title">Moje ostatnie projekty</h3>
-					<p class="section-heading-subtitle">
-						myślę, że na pewno coś wpadnie Ci w oko...
-					</p>
-					<div class="section-heading-watermark">
-						<div class="line-short"></div>
-						<div class="line-long"></div>
-					</div>
-				</div>
-				<div class="section-content">
-					<div class="thumbnail">
-						<img
-							class="thumbnail-img"
-							src="/assets/images/portfolio/myboard/thumbnail.jpg"
-							alt="Grafika projektu"
-						/>
-					</div>
-					<div class="thumbnail">
-						<img
-							class="thumbnail-img"
-							src="/assets/images/portfolio/deadbyimmersion/thumbnail.jpg"
-							alt="Grafika projektu"
-						/>
-					</div>
-				</div>
-				<h2 class="section-watermark">Portfolio</h2>
-			</section>
-			<section class="section about-me">
-				<div class="section-heading">
-					<h3 class="section-heading-title">Trochę o mnie</h3>
-					<p class="section-heading-subtitle">
-						Nie mam pojęcia co tu napisać :/
-					</p>
-					<div class="section-heading-watermark">
-						<div class="line-short"></div>
-						<div class="line-long"></div>
-					</div>
-				</div>
-				<div class="section-content"></div>
-				<h2 class="section-watermark">TL;DR;</h2>
-			</section>
-			<section class="section contact">
-				<div class="section-heading">
-					<h3 class="section-heading-title">
-						Masz pomysł do zrealizowania lub dodatkowe pytania?
-					</h3>
-					<p class="section-heading-subtitle">
-						Napisz do mnie, na pewno uda nam się stworzyć coś wspaniałego,,,
-					</p>
-					<div class="section-heading-watermark">
-						<div class="line-short"></div>
-						<div class="line-long"></div>
-					</div>
-				</div>
-				<div class="section-content">
-					<form class="form">
-						<div class="input-field">
-							<label class="label email-label" for="email">E-mail</label>
-							<input
-								class="field email-field"
-								id="email"
-								type="email"
-								name="email"
-							/>
-						</div>
-						<div class="input-field">
-							<label class="label subject-label" for="subject">Temat</label>
-							<input
-								class="field subject-field"
-								id="subject"
-								type="text"
-								name="subject"
-							/>
-						</div>
-						<div class="input-field">
-							<label class="label message-label" for="message">Wiadomość</label>
-							<textarea
-								class="field message-field"
-								name="message"
-								id="message"
-								cols="30"
-								rows="10"
-							></textarea>
-						</div>
-						<button class="submit" id="contact-submit" type="submit">
-							<div class="submit-inner">Wyślij</div>
-						</button>
-					</form>
-				</div>
-				<h2 class="section-watermark">Kontakt</h2>
-			</section>
-		</main>
-		<footer class="footer">
-			<p>Konrad Kowalik</p>
-			<p class="copyrights">Copyright @ 2022. Wszelkie prawa zastrzeżone.</p>
-			<div class="footer-watermark-lines">
-				<div class="line-short"></div>
-				<div class="line-long"></div>
-			</div>
-			<div class="footer-watermark-text">Kowalik</div>
-		</footer>
-		<script src="scripts/index.js"></script>
 	</body>
 </html>
