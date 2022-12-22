@@ -13,12 +13,14 @@ html {
 	--color-background: 172, 33%, 95%;
 	--color-text: 217, 96%, 11%;
 	--color-primary: 234, 100%, 66%;
+	--color-primary-light: 233, 97%, 72%;
+	--color-primary-lighter: 232, 92%, 81%;
 
 	scroll-behavior: smooth;
 }
 
 body {
-	font-family: 'Montserrat';
+	font-family: 'Hind Madurai';
 	font-weight: 100;
 
 	color: hsl(var(--color-text));
@@ -31,23 +33,6 @@ button {
 	border-radius: 2px;
 
 	cursor: pointer;
-
-	&.styled-button {
-		padding: 0.5rem;
-
-		border: 1px solid hsla(var(--color-text), 0.16);
-		border-radius: 2px;
-
-		.button-inner {
-			padding: 0.75rem 1rem;
-
-			font-size: 1rem;
-			font-weight: 400;
-
-			background-color: hsl(var(--color-button));
-			border-radius: 2px;
-		}
-	}
 }
 
 a {
@@ -60,4 +45,16 @@ ul,
 ol,
 li {
 	list-style-type: none;
+}
+
+h1 {
+	font-family: 'Lora';
+	font-size: 2.5rem;
+	font-weight: 600;
+}
+
+h2 {
+	font-family: 'Lora';
+	font-size: 1.5rem;
+	font-weight: 500;
 }
