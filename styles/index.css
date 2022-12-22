@@ -81,16 +81,6 @@ h2 {
   max-width: 90rem;
   margin: 2rem auto;
 }
-.contact .line {
-  display: none;
-  width: 1px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: hsl(var(--color-primary-lighter));
-}
 .contact .contact-buttons {
   display: flex;
   justify-content: space-between;
@@ -137,10 +127,6 @@ h2 {
     margin: 0;
     z-index: 16;
   }
-  .contact .line {
-    display: block;
-    z-index: -1;
-  }
   .contact .contact-buttons {
     flex-direction: column;
     justify-content: flex-start;
@@ -149,6 +135,23 @@ h2 {
     margin: 11rem auto 0;
     padding: 1rem 0;
     background-color: hsl(var(--color-background));
+  }
+}
+
+.contact-line {
+  display: none;
+  width: 1px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 5%;
+  transform: translateX(-50%);
+  background-color: hsl(var(--color-primary-lighter));
+}
+@media screen and (min-width: 61rem) {
+  .contact-line {
+    display: block;
+    z-index: -1;
   }
 }
 
@@ -305,6 +308,30 @@ h2 {
   width: 100%;
   margin: 0 0 8rem;
 }
+.main .section .section-heading .section-heading-name {
+  font-family: "Lora";
+  font-weight: 500;
+  color: hsl(var(--color-text-light));
+}
+.main .section .section-heading .section-heading-title {
+  margin: 0.25rem 0 1rem;
+}
+.main .section .section-heading .cta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  margin: 2rem 0 0;
+}
+.main .section .section-heading .cta .label {
+  font-weight: 400;
+  color: hsl(var(--color-primary));
+}
+.main .section .section-heading .cta .line {
+  width: 2rem;
+  height: 0.0625rem;
+  background-color: hsl(var(--color-primary));
+  border-radius: 50%;
+}
 .main .welcome {
   display: flex;
   flex-direction: column;
@@ -398,5 +425,71 @@ h2 {
   .main .welcome .welcome-img-wrapper {
     align-self: flex-start;
     width: 50%;
+  }
+}
+.main .services {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6rem;
+}
+.main .services .content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+.main .services .content .service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+.main .services .content .service-card .service-name {
+  font-family: "Lora";
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.main .services .content .service-card::before {
+  content: "";
+  width: 3rem;
+  height: 3rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: -1;
+}
+.main .services .content .service-card.serivce-card-websites::before {
+  background-image: url("../../assets/icons/icon-website.svg");
+}
+.main .services .content .service-card.serivce-card-webapps::before {
+  background-image: url("../../assets/icons/icon-app.svg");
+}
+.main .services .content .service-card.serivce-card-uidesigns::before {
+  background-image: url("../../assets/icons/icon-design.svg");
+}
+.main .services .content .service-card.serivce-card-optimizations::before {
+  background-image: url("../../assets/icons/icon-optimization.svg");
+}
+@media screen and (min-width: 61rem) {
+  .main .services {
+    grid-template-columns: 1fr;
+  }
+  .main .services .content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: -webkit-max-content -webkit-max-content;
+    grid-template-rows: max-content max-content;
+  }
+  .main .services .content .service-card::before {
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    translate: -1rem -1rem;
+    opacity: 0.64;
+  }
+}
+@media screen and (min-width: 90rem) {
+  .main .services {
+    grid-template-columns: 1fr 1fr;
   }
 }/*# sourceMappingURL=index.css.map */
