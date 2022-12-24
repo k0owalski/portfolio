@@ -223,7 +223,7 @@ h2 {
   display: flex;
   align-items: center;
   gap: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 500;
   line-height: 100%;
   color: hsl(var(--color-background));
@@ -599,5 +599,42 @@ h2 {
     grid-template-columns: repeat(2, calc(50% - 3rem));
     align-items: flex-end;
     gap: 6rem;
+  }
+}
+.main .skills {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+@media screen and (min-width: 90rem) {
+  .main .skills .section-heading {
+    width: 50%;
+  }
+}
+.main .skills .content .skill-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.main .skills .content .skill-list .skill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.main .skills .content .skill-list .skill::before {
+  content: "";
+  width: 0.25rem;
+  height: 0.25rem;
+  background-color: hsl(var(--color-primary));
+  border-radius: 50%;
+}
+@media screen and (min-width: 61rem) {
+  .main .skills .content .skill-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 90rem) {
+  .main .skills .content {
+    width: 50%;
   }
 }/*# sourceMappingURL=index.css.map */

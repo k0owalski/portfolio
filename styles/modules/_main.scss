@@ -366,4 +366,49 @@
 			gap: 6rem;
 		}
 	}
+
+	.skills {
+		display: flex;
+		flex-direction: column;
+		gap: 4rem;
+
+		.section-heading {
+			@media screen and (min-width: 90rem) {
+				width: 50%;
+			}
+		}
+
+		.content {
+			.skill-list {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 1rem;
+
+				.skill {
+					display: flex;
+					align-items: center;
+					gap: 0.5rem;
+
+					&::before {
+						content: '';
+
+						width: 0.25rem;
+						height: 0.25rem;
+
+						background-color: hsl(var(--color-primary));
+
+						border-radius: 50%;
+					}
+				}
+
+				@media screen and (min-width: 61rem) {
+					grid-template-columns: 1fr 1fr 1fr;
+				}
+			}
+
+			@media screen and (min-width: 90rem) {
+				width: 50%;
+			}
+		}
+	}
 }
