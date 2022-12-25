@@ -76,6 +76,23 @@ h2 {
   font-weight: 500;
 }
 
+@-webkit-keyframes show_contact_buttons {
+  from {
+    translate: 0 -11rem;
+  }
+  to {
+    translate: 0 0;
+  }
+}
+
+@keyframes show_contact_buttons {
+  from {
+    translate: 0 -11rem;
+  }
+  to {
+    translate: 0 0;
+  }
+}
 .contact {
   width: 80%;
   max-width: 90rem;
@@ -87,6 +104,12 @@ h2 {
   align-items: center;
   width: 100%;
   height: 100%;
+  -webkit-animation-name: show_contact_buttons;
+          animation-name: show_contact_buttons;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 0.64s;
+          animation-duration: 0.64s;
 }
 .contact .contact-buttons .contact-button {
   width: 2rem;
@@ -299,6 +322,23 @@ h2 {
   transform: translate(0, -50%);
 }
 
+@-webkit-keyframes show {
+  from {
+    translate: 0 4rem;
+  }
+  to {
+    translate: 0 0;
+  }
+}
+
+@keyframes show {
+  from {
+    translate: 0 4rem;
+  }
+  to {
+    translate: 0 0;
+  }
+}
 .main {
   width: 80%;
   max-width: 90rem;
@@ -340,6 +380,14 @@ h2 {
 .main .welcome .content {
   width: 100%;
 }
+.main .welcome .content .welcome-title {
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 0.64s;
+          animation-duration: 0.64s;
+  -webkit-animation-name: show;
+          animation-name: show;
+}
 @media screen and (min-width: 61rem) {
   .main .welcome .content .welcome-title {
     font-size: 3rem;
@@ -352,10 +400,22 @@ h2 {
 }
 .main .welcome .content .welcome-description {
   margin: 1rem 0 3rem;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 0.96s;
+          animation-duration: 0.96s;
+  -webkit-animation-name: show;
+          animation-name: show;
 }
 .main .welcome .content .cta-wrapper {
   display: flex;
   gap: 6rem;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 1.28s;
+          animation-duration: 1.28s;
+  -webkit-animation-name: show;
+          animation-name: show;
 }
 .main .welcome .content .cta-wrapper .cta-primary {
   display: flex;
@@ -413,6 +473,12 @@ h2 {
   align-self: flex-end;
   width: 100%;
   max-width: 32rem;
+  -webkit-animation-name: show;
+          animation-name: show;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 0.64s;
+          animation-duration: 0.64s;
 }
 .main .welcome .welcome-img-wrapper .welcome-img {
   width: 100%;
@@ -442,6 +508,14 @@ h2 {
   flex-direction: column;
   gap: 0.5rem;
   position: relative;
+  -webkit-animation-name: show;
+          animation-name: show;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 0.64s;
+          animation-duration: 0.64s;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 .main .services .content .service-card .service-name {
   font-family: "Lora";
@@ -468,6 +542,14 @@ h2 {
 }
 .main .services .content .service-card.serivce-card-optimizations::before {
   background-image: url("../../assets/icons/icon-optimization.svg");
+}
+.main .services .content .service-card:nth-of-type(3), .main .services .content .service-card:nth-of-type(4) {
+  -webkit-animation-name: show;
+          animation-name: show;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 0.96s;
+          animation-duration: 0.96s;
 }
 @media screen and (min-width: 61rem) {
   .main .services {
@@ -506,6 +588,14 @@ h2 {
   gap: 3rem;
   width: 100%;
   position: relative;
+  -webkit-animation-name: show;
+          animation-name: show;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 0.96s;
+          animation-duration: 0.96s;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 .main .portfolio .content .slider {
   width: 100%;
@@ -564,6 +654,7 @@ h2 {
   border: 0.0625rem solid hsl(var(--color-primary));
   border-radius: 50%;
   transition: background-color 0.24s, border 0.24s;
+  cursor: pointer;
 }
 .main .portfolio .content .slider-controls .dot.is-active {
   width: 1rem;
@@ -610,6 +701,16 @@ h2 {
   .main .skills .section-heading {
     width: 50%;
   }
+}
+.main .skills .content {
+  -webkit-animation-name: show;
+          animation-name: show;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 0.96s;
+          animation-duration: 0.96s;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 .main .skills .content .skill-list {
   display: grid;

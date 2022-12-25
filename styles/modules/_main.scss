@@ -1,3 +1,13 @@
+@keyframes show {
+	from {
+		translate: 0 4rem;
+	}
+
+	to {
+		translate: 0 0;
+	}
+}
+
 .main {
 	width: 80%;
 	max-width: 90rem;
@@ -55,6 +65,10 @@
 			width: 100%;
 
 			.welcome-title {
+				animation-timing-function: ease;
+				animation-duration: 0.64s;
+				animation-name: show;
+
 				@media screen and (min-width: 61rem) {
 					font-size: 3rem;
 				}
@@ -66,11 +80,19 @@
 
 			.welcome-description {
 				margin: 1rem 0 3rem;
+
+				animation-timing-function: ease;
+				animation-duration: 0.96s;
+				animation-name: show;
 			}
 
 			.cta-wrapper {
 				display: flex;
 				gap: 6rem;
+
+				animation-timing-function: ease;
+				animation-duration: 1.28s;
+				animation-name: show;
 
 				.cta-primary {
 					display: flex;
@@ -147,6 +169,10 @@
 			width: 100%;
 			max-width: 32rem;
 
+			animation-name: show;
+			animation-timing-function: ease;
+			animation-duration: 0.64s;
+
 			.welcome-img {
 				width: 100%;
 			}
@@ -181,6 +207,11 @@
 
 				position: relative;
 
+				animation-name: show;
+				animation-timing-function: ease;
+				animation-duration: 0.64s;
+				animation-play-state: paused;
+
 				.service-name {
 					font-family: 'Lora';
 					font-size: 1.25rem;
@@ -214,6 +245,13 @@
 
 				&.serivce-card-optimizations::before {
 					background-image: url('../../assets/icons/icon-optimization.svg');
+				}
+
+				&:nth-of-type(3),
+				&:nth-of-type(4) {
+					animation-name: show;
+					animation-timing-function: ease;
+					animation-duration: 0.96s;
 				}
 			}
 		}
@@ -259,6 +297,11 @@
 			width: 100%;
 
 			position: relative;
+
+			animation-name: show;
+			animation-timing-function: ease;
+			animation-duration: 0.96s;
+			animation-play-state: paused;
 
 			.slider {
 				width: 100%;
@@ -321,6 +364,8 @@
 
 					transition: background-color 0.24s, border 0.24s;
 
+					cursor: pointer;
+
 					&.is-active {
 						width: 1rem;
 						height: 1rem;
@@ -379,6 +424,11 @@
 		}
 
 		.content {
+			animation-name: show;
+			animation-timing-function: ease;
+			animation-duration: 0.96s;
+			animation-play-state: paused;
+
 			.skill-list {
 				display: grid;
 				grid-template-columns: 1fr 1fr;

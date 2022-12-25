@@ -1,3 +1,44 @@
+function isInViewport(el) {
+	const bounding = el.getBoundingClientRect();
+
+	if (
+		bounding.top >= 0 &&
+		bounding.left >= 0 &&
+		bounding.left <= window.innerWidth &&
+		bounding.top <= window.innerHeight
+	)
+		return true;
+
+	return false;
+}
+
+function animateServices() {
+	const serviceCards = document.querySelectorAll('.service-card');
+	const serviceContent = document.querySelector('.services .content');
+
+	if (isInViewport(serviceContent)) {
+		for (let sCard of serviceCards) {
+			sCard.style.animationPlayState = 'running';
+		}
+	}
+}
+
+function animatePortfolio() {
+	const portfolioContent = document.querySelector('.portfolio .content');
+
+	if (isInViewport(portfolioContent)) {
+		portfolioContent.style.animationPlayState = 'running';
+	}
+}
+
+function animateSkills() {
+	const skillsContent = document.querySelector('.skills .content');
+
+	if (isInViewport(skillsContent)) {
+		skillsContent.style.animationPlayState = 'running';
+	}
+}
+
 (function () {
 	const hamburger = document.querySelector('#hamburger');
 	const header = document.querySelector('#header');
@@ -32,4 +73,14 @@
 			)}) 0`;
 		});
 	}
+
+	window.addEventListener('scroll', () => {
+		animateServices();
+		animatePortfolio();
+		animateSkills();
+	});
+
+	animateServices();
+	animatePortfolio();
+	animateSkills();
 })();
