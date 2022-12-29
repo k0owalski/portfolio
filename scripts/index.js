@@ -1,3 +1,38 @@
+function createModal(event) {
+	const template = document.querySelector('#modal-template');
+	const modalWrapper = document.querySelector('#modal-wrapper');
+
+	const modal = template.content.cloneNode(true);
+
+	const image = modal.querySelector('#modal-image');
+	const title = modal.querySelector('#modal-title');
+	const tag = modal.querySelector('#modal-tag');
+	const description = modal.querySelector('#modal-description');
+	const openButton = modal.querySelector('#modal-open-button');
+	const githubButton = modal.querySelector('#modal-github-button');
+
+	const {
+		modalTitle,
+		modalTag,
+		modalDescription,
+		modalOpenLink,
+		modalGithubLink,
+	} = event.target.dataset;
+
+	image.src = event.target.src;
+	title.innerText = modalTitle;
+	tag.innerText = modalTag;
+	description.innerText = modalDescription;
+	openButton.href = modalOpenLink;
+	githubButton.href = modalGithubLink;
+
+	modalWrapper.append(modal);
+
+	document
+		.querySelector('#modal-bg')
+		.addEventListener('click', () => (modalWrapper.innerHTML = null));
+}
+
 function isInViewport(el) {
 	const bounding = el.getBoundingClientRect();
 
@@ -47,6 +82,8 @@ function animateSkills() {
 		'.portfolio .slider-controls .dot'
 	);
 	const sliderInner = document.querySelector('.portfolio .slider-inner');
+	const slides = document.querySelectorAll('.portfolio .slider .slide');
+	const slider = document.querySelector('.portfolio .slider');
 
 	hamburger.addEventListener('click', () =>
 		header.classList.toggle('is-active')
@@ -74,10 +111,26 @@ function animateSkills() {
 		});
 	}
 
+	for (let slide of slides) {
+		if (window.matchMedia('(min-width: 90rem)').matches)
+			slide.style.width = `${slider.clientWidth / 2 - 8}px`;
+		else slide.style.width = `${slider.clientWidth}px`;
+
+		slide.addEventListener('click', createModal);
+	}
+
 	window.addEventListener('scroll', () => {
 		animateServices();
 		animatePortfolio();
 		animateSkills();
+	});
+
+	window.addEventListener('resize', () => {
+		for (let slide of slides) {
+			if (window.matchMedia('(min-width: 90rem)').matches)
+				slide.style.width = `${slider.clientWidth / 2 - 8}px`;
+			else slide.style.width = `${slider.clientWidth}px`;
+		}
 	});
 
 	animateServices();

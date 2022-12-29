@@ -161,13 +161,35 @@
 									src="assets/images/image-waveq.png"
 									alt="slide image"
 									class="slide-image"
+									data-modal-title="Waveq"
+									data-modal-tag="UI design"
+									data-modal-description="It's a concept design of a online video streaming portal."
+									data-modal-open-link="https://dribbble.com/shots/20198911-Online-video-platform-concept"
+									data-modal-github-link=""
 								/>
 							</li>
 							<li class="slide">
 								<img
-									src="assets/images/image-porfolio.png"
+									src="assets/images/image-foodipes.png"
 									alt="slide image"
 									class="slide-image"
+									data-modal-title="Foodipes"
+									data-modal-tag="UI design"
+									data-modal-description="It's a concept design of a culinary blog."
+									data-modal-open-link="https://dribbble.com/shots/20216901-Foodipes"
+									data-modal-github-link=""
+								/>
+							</li>
+							<li class="slide">
+								<img
+									src="assets/images/image-coffetime.png"
+									alt="slide image"
+									class="slide-image"
+									data-modal-title="Coffetime"
+									data-modal-tag="UI design"
+									data-modal-description="It's a concept design of a coffeehouse chain site."
+									data-modal-open-link="https://dribbble.com/shots/20234040-Coffetime-landing-page-concept"
+									data-modal-github-link=""
 								/>
 							</li>
 						</ul>
@@ -175,6 +197,7 @@
 					<div class="slider-controls">
 						<div class="dot is-active" data-slide-id="0"></div>
 						<div class="dot" data-slide-id="1"></div>
+						<div class="dot desktop-disabled" data-slide-id="2"></div>
 					</div>
 				</div>
 			</section>
@@ -210,5 +233,44 @@
 				</div>
 			</section>
 		</main>
+		<div class="modal-wrapper" id="modal-wrapper"></div>
 	</body>
+	<template id="modal-template">
+		<div class="modal">
+			<div class="modal-inner" id="modal-inner">
+				<div class="modal-image-wrapper">
+					<img
+						class="modal-image"
+						id="modal-image"
+						src=""
+						alt="Project preview"
+					/>
+				</div>
+				<div class="modal-content">
+					<div class="content-inner">
+						<span class="modal-tag" id="modal-tag"></span>
+						<h2 class="modal-title" id="modal-title"></h2>
+						<p class="modal-description" id="modal-description"></p>
+					</div>
+					<div class="buttons">
+						<a
+							href="#"
+							target="_blank"
+							class="modal-open-button"
+							id="modal-open-button"
+							>Open in a new tab</a
+						>
+						<a
+							href="#"
+							target="_blank"
+							class="modal-github-button"
+							id="modal-github-button"
+							>Open in GitHub</a
+						>
+					</div>
+				</div>
+			</div>
+			<div class="modal-bg" id="modal-bg"></div>
+		</div>
+	</template>
 </html>

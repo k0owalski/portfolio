@@ -618,9 +618,9 @@ h2 {
 .main .portfolio .content .slider .slider-inner .slide {
   width: 80vw;
   aspect-ratio: 4/3;
-  background-color: hsla(var(--color-primary), 0.32);
   border-radius: 0.25rem;
   overflow: hidden;
+  cursor: pointer;
 }
 .main .portfolio .content .slider .slider-inner .slide .slide-image {
   width: 100%;
@@ -661,6 +661,11 @@ h2 {
   height: 1rem;
   background-color: hsl(var(--color-primary));
   border: none;
+}
+@media screen and (min-width: 90rem) {
+  .main .portfolio .content .slider-controls .dot.desktop-disabled {
+    display: none;
+  }
 }
 .main .portfolio .content::before {
   content: "";
@@ -738,4 +743,108 @@ h2 {
   .main .skills .content {
     width: 50%;
   }
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.modal .modal-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  max-width: 80vw;
+  height: 80vh;
+  aspect-ratio: 4/4.5;
+  background-color: hsl(var(--color-background));
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.modal .modal-inner .modal-image-wrapper {
+  grid-row: 1/-2;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.modal .modal-inner .modal-image-wrapper .modal-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.modal .modal-inner .modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+}
+.modal .modal-inner .modal-content .modal-tag {
+  color: hsl(var(--color-primary));
+}
+.modal .modal-inner .modal-content .modal-description {
+  margin: 1rem 0 0;
+}
+.modal .modal-inner .modal-content .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.modal .modal-inner .modal-content .buttons .modal-open-button,
+.modal .modal-inner .modal-content .buttons .modal-github-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-weight: 400;
+  border-radius: 0.25rem;
+}
+.modal .modal-inner .modal-content .buttons .modal-open-button {
+  color: hsl(var(--color-background));
+  background-color: hsl(var(--color-primary));
+}
+.modal .modal-inner .modal-content .buttons .modal-open-button::after {
+  content: "";
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url("../../assets/icons/icon-open-in-new.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.modal .modal-inner .modal-content .buttons .modal-github-button {
+  display: none;
+  color: hsl(var(--color-primary));
+  border: 1px solid hsl(var(--color-primary));
+}
+.modal .modal-inner .modal-content .buttons .modal-github-button::after {
+  content: "";
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url("../../assets/icons/icon-github-alt.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+@media screen and (min-width: 61rem) {
+  .modal .modal-inner .modal-content .buttons {
+    flex-direction: row;
+  }
+}
+.modal .modal-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: hsla(var(--color-text), 0.5);
+  z-index: -1;
 }/*# sourceMappingURL=index.css.map */

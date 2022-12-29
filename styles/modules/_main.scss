@@ -322,11 +322,11 @@
 						width: 80vw;
 						aspect-ratio: 4 / 3;
 
-						background-color: hsla(var(--color-primary), 0.32);
-
 						border-radius: 0.25rem;
 
 						overflow: hidden;
+
+						cursor: pointer;
 
 						.slide-image {
 							width: 100%;
@@ -373,6 +373,12 @@
 						background-color: hsl(var(--color-primary));
 
 						border: none;
+					}
+
+					&.desktop-disabled {
+						@media screen and (min-width: 90rem) {
+							display: none;
+						}
 					}
 				}
 			}
