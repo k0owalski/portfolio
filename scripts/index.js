@@ -116,7 +116,42 @@ function animateSkills() {
 			slide.style.width = `${slider.clientWidth / 2 - 8}px`;
 		else slide.style.width = `${slider.clientWidth}px`;
 
+		const touch = { start: 0, end: 0 };
+
 		slide.addEventListener('click', createModal);
+
+		slide.addEventListener('touchstart', function (event) {
+			touch.start = event.changedTouches[0].screenX;
+		});
+
+		slide.addEventListener('touchend', function (event) {
+			touch.end = event.changedTouches[0].screenX;
+
+			const sliderWidth = document.querySelector(
+				'.portfolio .slider .slide'
+			).clientWidth;
+
+			const direction = Math.sign(touch.start - touch.end);
+			const slideId = parseInt(event.target.dataset.slideId);
+
+			if (
+				(slideId === 0 && direction < 0) ||
+				(slideId === slides.length - 1 && direction > 0)
+			)
+				return;
+
+			sliderInner.style.translate = `calc((-${sliderWidth}px - 1rem) * ${
+				slideId + direction
+			}) 0`;
+
+			for (let d of sliderControls) {
+				d.classList.remove('is-active');
+
+				if (d.dataset.slideId == slideId + direction) {
+					d.classList.add('is-active');
+				}
+			}
+		});
 	}
 
 	window.addEventListener('scroll', () => {
