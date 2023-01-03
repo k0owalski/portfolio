@@ -111,6 +111,10 @@
 						background-position: center;
 						background-size: contain;
 					}
+
+					&.is-active {
+						display: flex;
+					}
 				}
 
 				@media screen and (min-width: 61rem) {

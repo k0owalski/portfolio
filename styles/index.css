@@ -834,6 +834,9 @@ h2 {
   background-position: center;
   background-size: contain;
 }
+.modal .modal-inner .modal-content .buttons .modal-github-button.is-active {
+  display: flex;
+}
 @media screen and (min-width: 61rem) {
   .modal .modal-inner .modal-content .buttons {
     flex-direction: row;

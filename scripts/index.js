@@ -26,6 +26,8 @@ function createModal(event) {
 	openButton.href = modalOpenLink;
 	githubButton.href = modalGithubLink;
 
+	if (modalGithubLink) githubButton.classList.add('is-active');
+
 	modalWrapper.append(modal);
 
 	document
